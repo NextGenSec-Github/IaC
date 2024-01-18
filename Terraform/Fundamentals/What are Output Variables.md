@@ -1,4 +1,4 @@
-# Terraform Lesson: Output Variables
+Output Variables
 
 In Terraform, Output Variables allow you to expose specific values from your infrastructure deployment that can be useful for external systems or users. These values are typically the results of resource creations or computed information.
 
@@ -26,3 +26,41 @@ Once you apply your Terraform configuration, you can retrieve the values of outp
 ```bash
 terraform output instance_ip
 ```
+This command will display the value of the instance_ip variable.
+
+## Use Case: Retrieving Output in Another Configuration
+
+You can reference output values from one Terraform configuration in another by using the terraform_remote_state data source.
+
+```hcl
+data "terraform_remote_state" "other_config" {
+  backend = "s3"
+  config = {
+    bucket = "other-config-bucket"
+    key    = "terraform.tfstate"
+    region = "us-west-2"
+  }
+}
+
+resource "aws_instance" "example" {
+  ami           = "ami-0c55b159cbfafe1f0"
+  instance_type = "t2.micro"
+  
+  # Other resource configurations...
+
+  associate_public_ip_address = true
+}
+
+output "other_instance_ip" {
+  value = data.terraform_remote_state.other_config.outputs.instance_ip
+}
+```
+
+In this example, we're retrieving the instance_ip output variable from another Terraform configuration stored in an S3 bucket.
+
+# Remember, output variables enhance the modularity and reusability of your Terraform code, providing a clean way to share information across deployments.
+
+
+
+
+
