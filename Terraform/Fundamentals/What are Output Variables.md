@@ -19,4 +19,10 @@ output "instance_ip" {
 ```
 In this example, we're exposing the public IP address of an AWS EC2 instance.
 
+## Retrieving Output Values
 
+Once you apply your Terraform configuration, you can retrieve the values of output variables using the terraform output command:
+
+```bash
+terraform output instance_ip
+```
