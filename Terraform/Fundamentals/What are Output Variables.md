@@ -1,4 +1,4 @@
-Output Variables
+# Output Variables
 
 In Terraform, Output Variables allow you to expose specific values from your infrastructure deployment that can be useful for external systems or users. These values are typically the results of resource creations or computed information.
 
