@@ -58,7 +58,7 @@ output "other_instance_ip" {
 
 In this example, we're retrieving the instance_ip output variable from another Terraform configuration stored in an S3 bucket.
 
-# Remember, output variables enhance the modularity and reusability of your Terraform code, providing a clean way to share information across deployments.
+## Remember, output variables enhance the modularity and reusability of your Terraform code, providing a clean way to share information across deployments.
 
 
 
