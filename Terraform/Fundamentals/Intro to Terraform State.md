@@ -30,3 +30,13 @@ terraform {
     dynamodb_table = "terraform-lock-table"
   }
 }
+```
+## Working with Terraform State
+
+Initialize: Use terraform init to initialize your configuration and set up the chosen backend.
+
+Apply: Run terraform apply to create or modify resources. Terraform will update the state file accordingly.
+
+Destroy: Use terraform destroy to destroy resources. Again, Terraform updates the state file to reflect the changes.
+
+View State: The terraform show command provides a human-readable output of the current state.
