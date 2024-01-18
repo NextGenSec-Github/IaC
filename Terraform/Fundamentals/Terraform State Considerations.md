@@ -38,8 +38,11 @@ Terraform state is a JSON data structure intended for internal use within Terraf
 ## Key Takeaways:
 
 • Terraform state holds sensitive information about provisioned resources.
+
 • Store Terraform configuration files in version control systems, but keep the state file in secure remote backends.
+
 • Remote state backends, such as AWS S3 or Terraform Cloud, enhance security and collaboration.
+
 • Avoid manual edits to the state file and rely on Terraform state commands for modifications.
 
 Understanding and adhering to these considerations are crucial for maintaining a secure and efficient Terraform workflow. Now, let's explore these concepts further in hands-on labs. 🚀🛠️
