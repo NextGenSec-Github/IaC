@@ -29,5 +29,7 @@ For team collaboration, relying on a local copy of the state file is impractical
 ## Key Takeaways:
 
 **1.** Terraform state is instrumental in mapping, managing dependencies, and optimizing performance.
+
 **2.** Remote state storage enhances collaboration and minimizes errors in team environments.
+
 **3.** Understanding and leveraging Terraform state is crucial for effective infrastructure management.
