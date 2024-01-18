@@ -16,4 +16,7 @@ To declare an output variable in your Terraform configuration, use the `output` 
 output "instance_ip" {
   value = aws_instance.example.public_ip
 }
+```
+In this example, we're exposing the public IP address of an AWS EC2 instance.
+
 
